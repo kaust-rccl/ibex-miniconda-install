@@ -2,6 +2,9 @@
 
 set -e
 
+# deactivate base environment
+conda deactivate
+
 # reverse modifications to ~/.bashrc
 conda init --reverse bash
 
@@ -12,4 +15,4 @@ rm -rf ~/miniconda3
 rm -rf ~/.conda
 
 # remove the ~/.condarc config file if necessary
-rm ~/.condarc
+[ -f ~/.condarc ] && rm ~/.condarc
