@@ -23,6 +23,12 @@ $ cd ibex-miniconda-install/
 $ ./install-miniconda.sh
 ```
 
+The script will present several prompts that allow you to customise the Miniconda install. We 
+recommend that you  accept the default settings.
+
+After the installer script finishes, you will likely need to log out of Ibex and then log back in 
+for the changes made by the install script to take effect.
+
 ## Uninstalling Miniconda
 
 Login to Ibex using your KAUST credentials.
@@ -37,3 +43,6 @@ Change into the `ibex-miniconda-install` directory and run the uninstall script.
 $ cd ~/path/to/target-directory/ibex-miniconda-install/
 $ ./uninstall-miniconda.sh
 ```
+
+After the uninstaller script finishes you, will likely need to log out of Ibex and then log back in 
+for the	changes	made by the uninstall script to take effect.
