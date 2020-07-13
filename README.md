@@ -23,11 +23,25 @@ to logout of Ibex.
 
 ```bash
 $ cd ibex-miniconda-install/
-$ . install-miniconda.sh
+$ source install-miniconda.sh
 ```
 
-The script will present several prompts that allow you to customise the Miniconda install. We 
-recommend that you  accept the default settings.
+The script will present several prompts that allow you to customise the Miniconda install. We generally 
+recommend that you accept the default settings. However, when prompted with the following...
+
+```
+Do you wish the installer to initialize Miniconda3
+by running conda init?
+```
+
+...we recommend that you type `yes` (rather than the default `no`) to avoid having to manually initialize 
+Conda for Bash later. If you accidently accept the default, no worries. When the script finishes you need 
+to type the following commands.
+
+```bash
+conda init bash
+source ~/.bashrc
+```
 
 ## Uninstalling Miniconda
 
@@ -43,5 +57,5 @@ by the uninstaller script to take effect.
 
 ```bash
 $ cd ~/path/to/target-directory/ibex-miniconda-install/
-$ . uninstall-miniconda.sh
+$ source uninstall-miniconda.sh
 ```
