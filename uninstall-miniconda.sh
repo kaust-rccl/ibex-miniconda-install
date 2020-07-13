@@ -1,7 +1,3 @@
-#!/bin/bash --login
-
-set -e
-
 # deactivate base environment
 conda deactivate
 

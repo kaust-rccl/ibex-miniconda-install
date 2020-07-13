@@ -1,7 +1,3 @@
-#!/bin/bash --login
-
-set -e
-
 # install miniconda in user's $HOME directory
 wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
