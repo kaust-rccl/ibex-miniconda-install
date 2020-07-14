@@ -35,7 +35,7 @@ by running conda init?
 ```
 
 ...we recommend that you type `yes` (rather than the default `no`) to avoid having to manually initialize 
-Conda for Bash later. If you accidently accept the default, no worries. When the script finishes you need 
+Conda for Bash later. If you accidentally accept the default, no worries. When the script finishes you need 
 to type the following commands.
 
 ```bash
