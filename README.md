@@ -17,7 +17,7 @@ $ git clone https://github.com/kaust-rccl/ibex-miniconda-install.git
 ```
 
 Change into the newly cloned repository directory and source the install script. Sourcing the 
-install script runs each of the comands in the script as if you had entered them manually at 
+install script runs each of the commands in the script as if you had entered them manually at 
 the prompt and insures that changes made to your `~./bashrc` take effect without your having 
 to logout of Ibex.
 
@@ -26,7 +26,7 @@ $ cd ibex-miniconda-install/
 $ source install-miniconda.sh
 ```
 
-The script will present several prompts that allow you to customise the Miniconda install. We generally 
+The script will present several prompts that allow you to customize the Miniconda install. We generally 
 recommend that you accept the default settings. However, when prompted with the following...
 
 ```
