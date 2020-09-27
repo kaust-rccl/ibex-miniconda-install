@@ -44,6 +44,22 @@ conda init bash
 source ~/.bashrc
 ```
 
+### Deactivating Conda's `base` environment on login
+
+After installing Miniconda whenever you login to Ibex your prompt will now look as follows.
+
+```
+(base) $
+```
+
+This is because, by default, the Conda `base` environment is activated when you login to Ibex. 
+If you would prefer that the Conda `base` environment not be activated on login then you 
+can run the following command to set the `auto_activate_base` configuration parameter to `false`.
+
+```
+conda config --set auto_activate_base false
+```
+
 ## Uninstalling Miniconda
 
 Login to Ibex using your KAUST credentials.
