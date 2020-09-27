@@ -36,7 +36,7 @@ by running conda init?
 
 ...we recommend that you type `yes` to avoid having to manually initialize Conda for Bash later. 
 
-If you accidentally type `no`, don't worries. When the script finishes you simply need to type the 
+If you accidentally type `no`, don't worry. When the script finishes you simply need to type the 
 following commands.
 
 ```bash
