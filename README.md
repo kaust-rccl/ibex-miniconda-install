@@ -59,3 +59,6 @@ by the uninstaller script to take effect.
 $ cd ~/path/to/target-directory/ibex-miniconda-install/
 $ source uninstall-miniconda.sh
 ```
+
+**Running `uninstall-miniconda.sh` will delete all Conda environments stored in the
+`~/miniconda3/envs` directory.**
