@@ -9,10 +9,10 @@ Login to Ibex using your KAUST credentials.
 $ ssh $USERNAME@ilogin.ibex.kaust.edu.sa # use glogin.kaust.edu.sa if you need GPU nodes
 ```
 
-Clone this git repository somewhere in your Ibex home directory.
+Clone this git repository in your Ibex home directory.
 
 ```bash
-$ cd ~/path/to/target-directory/
+$ cd ~/
 $ git clone https://github.com/kaust-rccl/ibex-miniconda-install.git
 ```
 
