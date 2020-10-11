@@ -60,6 +60,10 @@ can run the following command to set the `auto_activate_base` configuration para
 conda config --set auto_activate_base false
 ```
 
+We have created a video on our YouTube channel that walks you through the above steps in detail.
+
+[![](http://img.youtube.com/vi/X-W7aVXH3_w/0.jpg)](http://www.youtube.com/watch?v=X-W7aVXH3_w "How to install Miniconda3 into your Ibex home directory")
+
 ## Uninstalling Miniconda
 
 Login to Ibex using your KAUST credentials.
