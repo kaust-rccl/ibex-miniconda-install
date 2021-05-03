@@ -12,3 +12,6 @@ rm -rf ~/.conda
 
 # remove the ~/.condarc config file if necessary
 [ -f ~/.condarc ] && rm ~/.condarc
+
+# source ~/.bashrc to load modifications
+source ~/.bashrc
