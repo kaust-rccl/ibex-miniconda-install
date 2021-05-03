@@ -9,4 +9,5 @@ source ~/.bashrc
 # update conda to most recent version (if necessary)
 conda update --name base --channel defaults --yes conda
 
-
+# install mamba (faster, experimental package manager) from Conda Forge
+conda install --name base --channel conda-forge mamba
