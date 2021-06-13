@@ -6,14 +6,14 @@ Bash scripts for Ibex users that install (or uninstall) Miniconda
 Login to Ibex using your KAUST credentials.
 
 ```bash
-$ ssh $USERNAME@ilogin.ibex.kaust.edu.sa # use glogin.kaust.edu.sa if you need GPU nodes
+ssh $USERNAME@ilogin.ibex.kaust.edu.sa # use glogin.kaust.edu.sa if you need GPU nodes
 ```
 
 Clone this git repository in your Ibex home directory.
 
 ```bash
-$ cd ~/
-$ git clone https://github.com/kaust-rccl/ibex-miniconda-install.git
+cd ~/
+git clone https://github.com/kaust-rccl/ibex-miniconda-install.git
 ```
 
 Change into the newly cloned repository directory and source the install script. Sourcing the 
@@ -22,8 +22,8 @@ the prompt and insures that changes made to your `~./bashrc` take effect without
 to logout of Ibex.
 
 ```bash
-$ cd ibex-miniconda-install/
-$ source install-miniconda.sh
+cd ibex-miniconda-install/
+source install-miniconda.sh
 ```
 
 The script will present several prompts that allow you to customize the Miniconda install. We generally 
@@ -44,20 +44,12 @@ conda init bash
 source ~/.bashrc
 ```
 
-### Deactivating Conda's `base` environment on login
-
-After installing Miniconda whenever you login to Ibex your prompt will now look as follows.
-
-```
-(base) $
-```
-
-This is because, by default, the Conda `base` environment is activated when you login to Ibex. 
-If you would prefer that the Conda `base` environment not be activated on login then you 
-can run the following command to set the `auto_activate_base` configuration parameter to `false`.
+By default, the Conda `base` environment is deactivated when you login to Ibex. 
+If you would prefer that the Conda `base` environment be activated on login then you 
+can run the following command to set the `auto_activate_base` configuration parameter to `true`.
 
 ```
-conda config --set auto_activate_base false
+conda config --set auto_activate_base true
 ```
 
 If you are still a little unsure about the whole process, we have created a tutorial on our 
@@ -65,12 +57,24 @@ YouTube channel that will walk you through the above steps in detail.
 
 [![](http://img.youtube.com/vi/X-W7aVXH3_w/0.jpg)](http://www.youtube.com/watch?v=X-W7aVXH3_w "How to install Miniconda3 into your Ibex home directory")
 
+## Updating Conda
+
+Conda is a rapidly developing tool and it is important that you keep your versions on 
+Ibex updated to the most recent version available. We have included an `update-conda.sh` script 
+that will update Conda for you. Change into the `ibex-miniconda-install` directory and source 
+the update script.
+
+```bash
+cd ~/ibex-miniconda-install
+source update-conda.sh
+```
+
 ## Uninstalling Miniconda
 
 Login to Ibex using your KAUST credentials.
 
 ```bash
-$ ssh $USERNAME@ilogin.ibex.kaust.edu.sa # use glogin.kaust.edu.sa if you need GPU nodes
+ssh $USERNAME@ilogin.ibex.kaust.edu.sa # use glogin.kaust.edu.sa if you need GPU nodes
 ```
 
 Change into the `ibex-miniconda-install` directory and source the uninstall script. Sourcing 
@@ -78,8 +82,8 @@ the install script insures that you don't need to logout of Ibex in order for th
 by the uninstaller script to take effect. 
 
 ```bash
-$ cd ~/path/to/target-directory/ibex-miniconda-install/
-$ source uninstall-miniconda.sh
+cd ~/ibex-miniconda-install/
+source uninstall-miniconda.sh
 ```
 
 **Running `uninstall-miniconda.sh` will delete all Conda environments stored in the
