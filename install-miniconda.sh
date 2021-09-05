@@ -14,3 +14,6 @@ conda install --name base --channel conda-forge mamba
 
 # make sure that base environment is not active by default
 conda config --set auto_activate_base false
+
+# second source required for update to conda config file to take effect
+source ~/.bashrc
