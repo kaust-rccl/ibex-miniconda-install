@@ -2,4 +2,4 @@
 conda update --name base conda --yes
 
 # update mamba
-mamba update --name base mamba --yes
+conda update --name base --channel conda-forge mamba --yes
