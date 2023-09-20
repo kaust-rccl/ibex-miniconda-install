@@ -23,32 +23,36 @@ to logout of Ibex.
 
 ```bash
 cd ibex-miniconda-install/
-source install-miniconda.sh
+source install-miniforge-ibex.sh
 ```
 
-The script will present several prompts that allow you to customize the Miniconda install. We generally 
-recommend that you accept the default settings. However, when prompted with the following...
+This script automates the installation of Mambaforge (**Provides same commands as Miniconda**) with user-specified options, sets up environment variables, configures Mambaforge behavior, and provides instructions for activating Mambaforge. It is designed for use in environments where Conda package management is needed. On ibex /ibex/user/$USER, you will find your folder for the WekaIO partition. However, if the following prompt appears ...
 
 ```
 Do you wish the installer to initialize Miniconda3
 by running conda init?
 ```
 
-...we recommend that you type `yes` to avoid having to manually initialize Conda for Bash later. 
+...we recommend that you type `no` to avoid having to manually initialize Conda for Bash later. 
 
-If you accidentally type `no`, don't worry. When the script finishes you simply need to type the 
-following commands.
+<!-- If you accidentally type `no`, don't worry. When the script finishes you simply need to type the  -->
+<!-- following commands. -->
 
-```bash
+<!-- ```bash
 conda init bash
 source ~/.bashrc
+``` -->
+As we recomend `base` to be deactivated , to activate it , you will need to source it
+```bash 
+source /ibex/user/$USER/mambaforge/bin/activate 
 ```
 
-By default, the Conda `base` environment is deactivated when you login to Ibex. 
+
+<!-- By default, the Conda `base` environment is deactivated when you login to Ibex.  -->
 If you would prefer that the Conda `base` environment be activated on login then you 
 can run the following command to set the `auto_activate_base` configuration parameter to `true`.
 
-```
+```bash
 conda config --set auto_activate_base true
 ```
 
