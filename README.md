@@ -48,14 +48,6 @@ source /ibex/user/$USER/mambaforge/bin/activate
 ```
 
 
-<!-- By default, the Conda `base` environment is deactivated when you login to Ibex.  -->
-If you would prefer that the Conda `base` environment be activated on login then you 
-can run the following command to set the `auto_activate_base` configuration parameter to `true`.
-
-```bash
-conda config --set auto_activate_base true
-```
-
 If you are still a little unsure about the whole process, we have created a tutorial on our 
 YouTube channel that will walk you through the above steps in detail.
 
