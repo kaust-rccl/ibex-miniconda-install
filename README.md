@@ -26,7 +26,7 @@ cd ibex-miniconda-install/
 source install-miniforge-ibex.sh
 ```
 
-This script automates the installation of Mambaforge (**Provides same commands as Miniconda**) with user-specified options, sets up environment variables, configures Mambaforge behavior, and provides instructions for activating Mambaforge. It is designed for use in environments where Conda package management is needed. On ibex /ibex/user/$USER, you will find your folder for the WekaIO partition. However, if the following prompt appears ...
+This script automates the installation of Mambaforge (**Provides same commands as Miniconda**) with user-specified options, sets up environment variables, configures Mambaforge behavior, and provides instructions for activating Mambaforge. It is designed for use in environments where Conda package management is needed. On ibex `/ibex/user/$USER`, you will find your folder for the WekaIO partition. However, if the following prompt appears ...
 
 ```
 Do you wish the installer to initialize Miniconda3
@@ -42,7 +42,7 @@ by running conda init?
 conda init bash
 source ~/.bashrc
 ``` -->
-As we recomend `base` to be deactivated , to activate it , you will need to source it
+As we recommend `base` to be deactivated, to activate it, you will need to source it
 ```bash 
 source /ibex/user/$USER/mambaforge/bin/activate 
 ```
