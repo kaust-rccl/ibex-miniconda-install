@@ -1,16 +1,16 @@
 # Define the log file path
-log_file="/ibex/user/$USER/mambaforge_installation.log"
+log_file="/ibex/user/$USER/miniforge_installation.log"
 
 # Function to log messages
 log() {
     local message="$1"
-    logger -t "Mambaforge installation" "$message"
+    logger -t "Miniforge3 installation" "$message"
     echo "$(date): $message" >> "$log_file"
 }
 
 # Initialize the log file if it doesn't exist
 touch "$log_file"
-log "Mambaforge installation script started"
+log "Miniforge installation script started"
 
 # Check if the directory /ibex/user/$USER exists     
 if [ ! -d "/ibex/user/$USER" ]; then
@@ -18,7 +18,7 @@ if [ ! -d "/ibex/user/$USER" ]; then
     exit 1
 fi
 
-# install Mambaforge in user's WekaIO directory
+# install Miniforge in user's WekaIO directory
 export PREFIX=/ibex/user/$USER
 
 # Check the output of the "which conda" command
@@ -39,15 +39,15 @@ else
     log "No previous conda version installed, resuming..."
 fi
 
-#Download and install latest Mambaforge
-wget --quiet https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
-log "Installing Mambaforge..."
-bash Mambaforge-Linux-x86_64.sh -b -p $PREFIX/mambaforge
-source $PREFIX/mambaforge/bin/activate
+#Download and install latest Miniforge
+wget --quiet https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+log "Installing Miniforge..."
+bash Miniforge3-Linux-x86_64.sh -b -p $PREFIX/miniforge
+source $PREFIX/miniforge/bin/activate
 conda deactivate
 conda init bash
-rm Mambaforge-Linux-x86_64.sh
-log "Mambaforge installation completed."
+rm Miniforge3-Linux-x86_64.sh
+log "Miniforge3 installation completed."
 
 # Create the conda_cache directory if it doesn't exist
 if [ ! -d "$PREFIX/conda_cache" ]; then
@@ -74,8 +74,8 @@ conda config --add envs_dirs $PREFIX/conda-environments
 # second source required for update to conda config file to take effect
 source ~/.bashrc
 
-log "Mambaforge installation script completed."
+log "Miniforge installation script completed."
 # Explain the user the steps
 echo "Type these two lines to activate miniconda"
 # echo "export CONDA_PKGS_DIRS=${PREFIX}/conda_cache"
-echo "source ${PREFIX}/mambaforge/bin/activate"
+echo "source ${PREFIX}/miniforge/bin/activate"
